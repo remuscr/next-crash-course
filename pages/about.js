@@ -8,6 +8,7 @@ const about = (props) => {
       </head>
       <h1>About</h1>
       <p>Paragraful acesta este adaugat din github desktop</p>
+      <p>Sparky e un bulangiu</p>
     </div>
   );
 };

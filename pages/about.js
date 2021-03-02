@@ -1,8 +1,8 @@
 import Head from "next/head";
-
+import styles from "../styles/About.module.css";
 const about = (props) => {
   return (
-    <div>
+    <div className={styles.backgroundRed}>
       <head>
         <title>About</title>
       </head>

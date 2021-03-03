@@ -1,14 +1,24 @@
 import Head from "next/head";
+import ArticleList from "../components/ArticleList";
 
-export default function Home() {
+export default function Home({ articles }) {
   return (
     <div>
-      <head>
+      <Head>
         <title>WebDev</title>
-        <neta bane="keywords" content="web development, programing" />
-      </head>
+        <meta name="keywords" content="web development, programing" />
+      </Head>
 
+      <ArticleList articles={articles} />
       <h1>Welcome to my site</h1>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const res = await fetch(`https://.../data`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+};
